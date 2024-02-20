@@ -78,6 +78,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 a {
   text-decoration: unset;
 }
@@ -86,4 +90,79 @@ nav ul {
   margin: unset;
   padding: unset;
   list-style: none;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+header .container div {
+  display: flex;
+  gap: 0.5rem;
+}
+header h1 {
+  font-size: 1rem;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+header nav {
+  background-color: rgb(254, 235, 235);
+  padding: 1rem;
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  right: 100%;
+  top: 0;
+  height: 100%;
+  transition: right 0.3s linear;
+  height: 100vh;
+  position: fixed;
+}
+header .show-nav {
+  right: 50%;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+header .login-button {
+  display: flex;
+  align-items: center;
+}
+header .login-button svg {
+  width: 30px;
+}
+header .menu-button {
+  background-color: transparent;
+  border: unset;
+  padding: unset;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header .menu-button svg#open {
+  width: 45px;
+}
+header .menu-button svg#close {
+  display: none;
+}
+header .menu-button[aria-expanded=true] svg#open {
+  display: none;
+}
+header .menu-button[aria-expanded=true] svg#close {
+  display: block;
+  width: 45px;
+}
+
+main .hero-banner {
+  height: 50vh;
+  background-image: url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=style.css.map */

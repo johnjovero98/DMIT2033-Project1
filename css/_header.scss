@@ -3,3 +3,82 @@ nav ul {
     padding: unset;
     list-style: none;
 }
+
+header {
+    position: absolute;
+    width: 100%;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        div {
+            display: flex;
+            gap: 0.5rem;
+        }
+    }
+
+    h1 {
+        font-size: 1rem;
+        border: 1px solid black;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+    }
+    
+    nav {
+        background-color: rgb(254, 235, 235);
+        padding: 1rem;
+        position: absolute;
+        overflow: hidden;
+        width: 50%;
+        right: 100%;
+        top: 0;
+        height: 100%;
+        transition: right 0.3s linear;
+        height: 100vh;
+        position: fixed;
+    }
+    
+    .show-nav {
+        right: 50%;
+        overflow-y: scroll;
+        padding: 1rem;
+    }
+
+    .login-button {
+        display: flex;
+        align-items: center;
+        svg {
+            width: 30px;
+        }
+    }
+
+    .menu-button {
+        background-color: transparent;
+        border: unset;
+        padding: unset;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        svg#open {
+            width: 45px;
+        }
+
+        svg#close {
+            display: none;
+        }
+    }   
+
+    .menu-button[aria-expanded="true" ] {
+        svg#open {
+            display: none;
+        }
+        svg#close {
+            display: block;
+            width: 45px;
+        }
+    }
+}
+
+
