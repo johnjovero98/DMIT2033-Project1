@@ -11,7 +11,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: .5rem;
+        padding: 0.5rem;
         div {
             display: flex;
             gap: 0.5rem;
@@ -37,11 +37,12 @@ header {
         transition: right 0.3s linear;
         height: 100vh;
         position: fixed;
+        z-index: 1;
     }
     
     .show-nav {
         right: 50%;
-        overflow-y: scroll;
+        // overflow-y: scroll;
         padding: 1rem;
     }
 
