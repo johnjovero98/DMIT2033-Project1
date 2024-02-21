@@ -214,8 +214,13 @@ main .habit svg {
 main .courses {
   padding: 0 0.5rem;
 }
+main .courses .img-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
 main .courses .img-gallery div {
   position: relative;
+  flex: 1 1 50%;
 }
 main .courses .img-gallery a {
   position: absolute;
@@ -223,17 +228,44 @@ main .courses .img-gallery a {
   width: 100%;
   height: 100%;
   display: none;
+  cursor: pointer;
 }
 main .courses .img-gallery div:hover a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.324);
+  background-color: rgba(183, 132, 201, 0.7333333333);
   color: white;
-  font-size: 2rem;
+  cursor: pointer;
+}
+main .courses .img-gallery div:hover a span {
+  padding: 1rem;
+  text-align: center;
 }
 main .courses .img-gallery img {
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+footer {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #B094B1;
+}
+footer .stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+footer .stats div {
+  flex: 1 1 25%;
+  text-align: center;
+}
+@media screen and (min-width: 700px) {
+  footer .stats div {
+    flex: 1 1 18%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -66,8 +66,15 @@ main {
     .courses{ 
         padding: 0 0.5rem;
 
+        .img-gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         .img-gallery div {
             position: relative;
+            flex: 1 1 50%;
+
         }
 
         .img-gallery a {
@@ -76,15 +83,21 @@ main {
             width: 100%;
             height: 100%;
             display: none;
+            cursor: pointer;
         }
 
         .img-gallery div:hover a {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.324);
+            background-color: #b784c9bb;
             color: white;
-            font-size: 2rem;
+            cursor: pointer;
+            
+            span {
+                padding: 1rem;
+                text-align: center;
+            }
         }
      
         .img-gallery img {
