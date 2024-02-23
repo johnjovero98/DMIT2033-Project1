@@ -1,3 +1,7 @@
+@use 'colors' as *;
+@use 'breakpoints' as *;
+
+
 nav ul {
     margin: unset;
     padding: unset;
@@ -11,7 +15,10 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem;
+        padding: 1rem;
+        a {
+            color: white;
+        }
         div {
             display: flex;
             gap: 0.5rem;
@@ -20,13 +27,15 @@ header {
 
     h1 {
         font-size: 1rem;
-        border: 1px solid black;
-        padding: 0.5rem 1rem;
+        border: 1px solid white;
+        padding: 0.5rem;
         text-transform: uppercase;
+        font-size: clamp(0.833rem, 0.7992rem + 0.1691vw, 1rem);
+
     }
     
     nav {
-        background-color: rgb(254, 235, 235);
+        background-color: $darkviolet;
         padding: 1rem;
         position: absolute;
         overflow: hidden;
@@ -38,6 +47,21 @@ header {
         height: 100vh;
         position: fixed;
         z-index: 1;
+
+        a {
+            display: block;
+            color: white;
+            padding: 1rem;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: $lightviolet;
+            color: black;
+            border-radius: 10px;
+
+        }
     }
     
     .show-nav {
@@ -46,14 +70,22 @@ header {
         padding: 1rem;
     }
 
+
+
+    
     .login-button {
         display: flex;
         align-items: center;
+        span {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
         svg {
+            fill: white;
             width: 30px;
         }
     }
-
+    
     .menu-button {
         background-color: transparent;
         border: unset;
@@ -61,16 +93,20 @@ header {
         display: flex;
         align-items: center;
         cursor: pointer;
-
+        
+        svg {
+            fill: white;
+        }
+        
         svg#open {
             width: 45px;
         }
-
+        
         svg#close {
             display: none;
         }
     }   
-
+    
     .menu-button[aria-expanded="true" ] {
         svg#open {
             display: none;
@@ -80,6 +116,38 @@ header {
             width: 45px;
         }
     }
+
+    @media screen and (min-width:$md) {
+        .container {
+            gap: 1rem;
+        }
+
+        .menu-button{
+            display: none;
+        }
+
+        h1 {
+            flex: 0 0 auto;
+        }
+
+        .show-nav, nav {
+            position: static;
+            height: unset;
+            padding: unset;
+            background-color: unset;
+            overflow: unset;
+            flex: 1 1 auto;
+            
+            ul {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            a {
+                padding: 0.5rem;
+                font-weight: unset;
+            }
+        }
+        
+    }
 }
-
-
