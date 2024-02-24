@@ -218,20 +218,22 @@ main .hero-banner {
   background-position: center;
   margin-bottom: 2rem;
 }
+main .hero-banner .call-to-action {
+  padding: unset;
+}
 main .hero-banner div {
-  position: relative;
-  top: 50%;
-  padding: 1rem;
+  position: sticky;
+  top: 100%;
+  padding: 2rem 1rem;
   color: white;
   text-transform: uppercase;
 }
 main .hero-banner div h2 {
-  font-size: clamp(2rem, -0.4rem + 7vw, 8rem);
+  font-size: clamp(2rem, -0.8235rem + 14.1176vw, 8rem);
 }
 main .hero-banner div p {
   font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
   font-weight: bold;
-  padding: 0.5rem;
 }
 main .hero-banner div a {
   font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
@@ -263,20 +265,12 @@ main .hero-banner div a:hover svg {
   main .hero-banner {
     height: 100vh;
   }
-  main .hero-banner div {
+  main .hero-banner .call-to-action {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
-    top: 65%;
-  }
-  main .hero-banner div h2 {
-    flex: 1 1 100%;
-  }
-  main .hero-banner div p {
-    flex: 1 1 auto;
-    text-align: right;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-end;
   }
 }
 main .learners > section {
@@ -375,20 +369,125 @@ main .learners > div svg {
   }
 }
 main .habit {
-  margin-top: 3rem;
   background-color: #D2D6A5;
+}
+main .habit > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
   text-align: center;
   padding: 3rem 0.5rem;
 }
-main .habit svg {
+main .habit > div div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .habit > div svg {
   width: 50px;
 }
+main .habit > div a {
+  width: -moz-max-content;
+  width: max-content;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+}
+main .habit > div a span {
+  flex: 0 1 auto;
+}
+main .habit > div a svg {
+  fill: white;
+  width: 30px;
+}
+main .habit > div a:hover {
+  background-color: white;
+  color: #D2D6A5;
+}
+main .habit > div a:hover svg {
+  fill: #D2D6A5;
+}
+@media screen and (min-width: 650px) {
+  main .habit > div {
+    gap: 3rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  main .habit > div div:nth-of-type(1) {
+    flex: 0 1 auto;
+  }
+  main .habit > div div:nth-of-type(2) {
+    flex: 0 1 auto;
+  }
+}
 main .courses {
+  margin-top: 3rem;
   padding: 0 0.5rem;
+}
+main .courses .course-search {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+main .courses .course-search input {
+  background-image: url(../img/search-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center left 10px;
+  width: 65%;
+  border: 2px solid #B094B1;
+  border-radius: 50px;
+  padding: 0.5rem;
+  padding-left: 40px;
+}
+@media screen and (min-width: 1000px) {
+  main .courses .course-search {
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  main .courses .course-search p {
+    flex: 1 1 30%;
+  }
 }
 main .courses .img-gallery {
   display: flex;
   flex-wrap: wrap;
+}
+main .courses .img-gallery div {
+  position: relative;
+  flex: 1 1 50%;
+}
+main .courses .img-gallery a {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  cursor: pointer;
+}
+main .courses .img-gallery div:hover a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(183, 132, 201, 0.7333333333);
+  color: white;
+  cursor: pointer;
+}
+main .courses .img-gallery div:hover a span {
+  padding: 1rem;
+  text-align: center;
+}
+main .courses .img-gallery img {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (min-width: 650px) {
   main .courses .img-gallery {
@@ -441,34 +540,16 @@ main .courses .img-gallery {
     aspect-ratio: 2/1;
   }
 }
-main .courses .img-gallery div {
-  position: relative;
-  flex: 1 1 50%;
-}
-main .courses .img-gallery a {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  cursor: pointer;
-}
-main .courses .img-gallery div:hover a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(183, 132, 201, 0.7333333333);
-  color: white;
-  cursor: pointer;
-}
-main .courses .img-gallery div:hover a span {
-  padding: 1rem;
-  text-align: center;
-}
-main .courses .img-gallery img {
-  aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media screen and (min-width: 1000px) {
+  main .courses .img-gallery {
+    display: flex;
+  }
+  main .courses .img-gallery div {
+    flex: 0 0 20%;
+  }
+  main .courses .img-gallery div img {
+    aspect-ratio: 1/1 !important;
+  }
 }
 
 footer {
@@ -496,4 +577,10 @@ footer .stats div {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1700px;
+  }
 }/*# sourceMappingURL=style.css.map */
