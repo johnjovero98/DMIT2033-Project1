@@ -19,7 +19,7 @@ main {
         div {
             position: sticky;
             top: 100%;
-            padding: 2rem 1rem;
+            padding: 2rem 1rem 5rem;
             color: white;
             text-transform: uppercase;
 
@@ -80,7 +80,7 @@ main {
     }
 
     .learners>section {
-        padding: 0 0.5rem;
+        padding: 0 1rem;
         margin: 1rem 0;
 
         h2 {
@@ -109,7 +109,7 @@ main {
     // introduction
     .learners>div {
         display: flex;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -147,6 +147,7 @@ main {
     @media screen and (min-width:$lg) {
         .learners {
             display: grid;
+            padding: 0 1rem;
             gap: 1rem;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: repeat(7, auto);
@@ -211,7 +212,7 @@ main {
         gap: 1rem;
         margin-top: 3rem;
         text-align: center;
-        padding: 3rem 0.5rem;
+        padding: 3rem 1rem;
 
         div:nth-of-type(2) {
             display: flex;
@@ -255,7 +256,8 @@ main {
 
     @media screen and (min-width:$md) {
         .habit>div {
-            gap: 3rem;
+            gap: 1rem;
+            padding: 3rem 1rem;
             flex-direction: row;
             justify-content: center;
             align-items: flex-end;
@@ -273,7 +275,7 @@ main {
 
     .courses {
         margin-top: 3rem;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
 
         .course-search {
             margin: 1rem 0;

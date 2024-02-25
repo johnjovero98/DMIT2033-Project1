@@ -3,8 +3,11 @@
 
 footer {
     margin-top: 1rem;
-    padding: 0.5rem;
     background-color: $lightviolet;
+
+    .container {
+        padding: 1rem;
+    }
 
     .stats {
         display: flex;
