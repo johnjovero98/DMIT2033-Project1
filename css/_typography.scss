@@ -88,6 +88,10 @@ main {
         p {
             font-family: $baskerville;
         }
+
+        a span {
+            font-size: clamp(1rem, 0.9295rem + 0.3524vw, 1.5rem);
+        }
     }
 }
 

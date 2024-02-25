@@ -6,7 +6,7 @@
 main {
     .hero-banner {
         height: 60vh;
-        background-image: url(../img/banner.jpg);
+        background-image: url(../img/banner.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -154,7 +154,7 @@ main {
                 }
 
                 img {
-                    aspect-ratio: 3 / 4;
+                    aspect-ratio: 587 / 720;
                 }
             }
 
@@ -165,7 +165,7 @@ main {
                 grid-row: 3 / span 3;
 
                 img {
-                    aspect-ratio: 4 / 3.25;
+                    aspect-ratio: 370 / 303;
                 }
             }
 
@@ -179,7 +179,7 @@ main {
                 }
 
                 img {
-                    aspect-ratio: 3 / 4;
+                    aspect-ratio: 117 / 155;
                 }
             }
         }
