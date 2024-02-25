@@ -12,3 +12,9 @@
     }
     
 }
+
+@media screen and (min-width:$xxl) {
+    .container {
+        max-width: 2500px;
+    }
+}

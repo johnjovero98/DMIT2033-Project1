@@ -18,22 +18,12 @@ main {
 
         div {
             position: sticky;
-            top: 100%;
-            padding: 2rem 1rem 5rem;
+            top: 65%;
+            padding: 1rem;
             color: white;
             text-transform: uppercase;
 
-            h2 {
-                font-size: clamp(2rem, -0.8235rem + 14.1176vw, 8rem);
-            }
-
-            p {
-                font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
-                font-weight: bold;
-            }
-
             a {
-                font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
                 width: max-content;
                 color: white;
                 display: flex;
@@ -84,16 +74,10 @@ main {
         margin: 1rem 0;
 
         h2 {
-            font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
-            text-transform: uppercase;
-            font-weight: 900;
+
 
             span {
-
-                // revise
-                font-family: serif;
-                font-weight: 300;
-                font-size: 2rem;
+ 
                 display: block;
             }
         }
@@ -116,12 +100,11 @@ main {
         gap: 1rem;
 
         p {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 2rem;
         }
 
         svg {
+            fill: $teal;
             margin-top: 1rem;
             width: 50px;
         }
@@ -246,10 +229,10 @@ main {
 
         a:hover {
             background-color: white;
-            color: $olive;
+            color: $beets;
 
             svg {
-                fill: $olive;
+                fill: $beets;
             }
         }
     }
@@ -263,7 +246,7 @@ main {
             align-items: flex-end;
 
             div:nth-of-type(1) {
-                flex: 0 1 auto;
+                flex: 0 1 70%;
             }
 
             div:nth-of-type(2) {
@@ -289,10 +272,14 @@ main {
                 background-position: center left 10px;
 
                 width: 65%;
-                border: 2px solid $lightviolet;
+                border: 2px solid $beets;
                 border-radius: 50px;
                 padding: 0.5rem;
                 padding-left: 40px;
+            }
+
+            input::placeholder {
+                color: $beets;
             }
 
         }

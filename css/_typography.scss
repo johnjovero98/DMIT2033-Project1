@@ -1,11 +1,101 @@
-$banner-heading-font: clamp(1.953rem, 1.5759rem + 1.8856vw, 3.815rem);
+@use 'breakpoints' as *;
+
+// typescale
+// h1	11.391rem	
+// h2	7.594rem	
+// h3	5.063rem	
+// h4	3.375rem	
+// h5	2.25rem	
+// h6	1.5rem	
+// p	1rem	
+
+
+// p and a
+$source-sans: "Source Sans 3", sans-serif;
+
+// headings and nav links
+$work-sans: "Work Sans", sans-serif;
+
+// aside and footer
+$baskerville: "Libre Baskerville", serif;
+
+
+
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: $source-sans;
+}
+
+h1, h2, a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+h2, nav a, .login-button span,
+.hero-banner p {
+    font-family: $work-sans;
+}
+
+p {
+    font-size: clamp(1rem, 0.9295rem + 0.3524vw, 1.5rem);
+}
+
+h2 {
+    color: #323232;
+    font-size: clamp(2.25rem, 2.0914rem + 0.793vw, 3.375rem);
 }
 
 
-a {
-    text-decoration: unset;
+header {
+    
+    h1, nav a , .login-button span {
+        font-size: clamp(1rem, 0.9295rem + 0.3524vw, 1.5rem);
+    }
 }
+
+
+main {
+    .hero-banner {
+        h2 {
+            color: white;
+            font-size: clamp(2.25rem, 0.9614rem + 6.443vw, 11.391rem);
+            line-height: 1;
+        }
+
+        p,a {
+            font-size: clamp(1rem, 0.6652rem + 1.674vw, 3.375rem);
+        }
+    }
+
+    .learners > div p {
+        font-family: $baskerville;
+        text-align: center;
+    }
+
+    .learners section {
+        h2 span {
+            font-size: clamp(1.5rem, 1.3943rem + 0.5286vw, 2.25rem);
+            font-family: $baskerville;
+            font-weight: 400;
+        }
+    }
+
+    .habit {
+        h2 {
+            color: white;
+        }
+
+        p {
+            font-family: $baskerville;
+        }
+    }
+}
+
+footer {
+    .stats {
+        font-family: $baskerville;
+    }
+}
+
+
 
